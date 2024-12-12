@@ -13,10 +13,12 @@ class ImagesController < ApplicationController
       flash[:success] = I18n.t('flash.success')
       redirect_to @image
     else
-      flash.now[:error] = I18n.t('flash.error')
-      render :new
+      flash[:error] = @image.errors.full_messages.join(', ') 
+      redirect_to  new_image_path
     end
   end
+  
+  
 
   def show
     @image = Image.find(params[:id])
