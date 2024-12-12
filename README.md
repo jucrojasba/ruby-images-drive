@@ -1,6 +1,4 @@
-# Nombre de tu Proyecto
-
-Descripción corta del proyecto.
+# Ruby Images Drive
 
 ## Requisitos
 
