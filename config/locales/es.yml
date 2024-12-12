@@ -1,0 +1,5 @@
+es:
+  hello: "Hola mundo"
+  flash:
+    success: "¡Imagen subida exitosamente!"
+    error: "Hubo un error al subir la imagen."
