@@ -2,13 +2,17 @@
   <h1 class="text-2xl font-bold text-center mb-6"><%= t('images.index.title') %></h1>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <% @images.each do |image| %>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <%= image.file.attached? ? image_tag(image.file.variant(resize_to_fill: [300, 200]), class: "w-full h-48 object-cover") : t('images.index.no_image') %>
-        <div class="p-4">
-          <h2 class="text-lg font-semibold mb-2"><%= image.title %></h2>
-          <%= link_to t('images.index.view_more'), image_path(image), class: "block text-center bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600" %>
-        </div>
-      </div>
+  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+    <% if image.file.attached? %>
+      <%= image_tag(image.file.url, class: "w-full h-48 object-cover") %> <!-- Utiliza .url para obtener la URL de la imagen en Cloudinary -->
+    <% else %>
+      <p><%= t('images.index.no_image') %></p>
     <% end %>
+    <div class="p-4">
+      <h2 class="text-lg font-semibold mb-2"><%= image.title %></h2>
+      <%= link_to t('images.index.view_more'), image_path(image), class: "block text-center bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600" %>
+    </div>
+  </div>
+<% end %>
   </div>
 </div>

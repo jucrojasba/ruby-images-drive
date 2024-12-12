@@ -1,6 +1,23 @@
 <nav class="bg-gray-800 p-4">
-  <div class="container mx-auto flex justify-end">
-    <%= link_to "Español", url_for(locale: :es), class: "text-white mx-2" %>
-    <%= link_to "English", url_for(locale: :en), class: "text-white mx-2" %>
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Enlaces de idioma con banderas -->
+    <div class="flex items-center space-x-2">
+      <%= link_to url_for(locale: :es), class: "text-white flex items-center text-sm" do %>
+        <!-- Bandera de Colombia -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png" alt="Colombia" class="w-[20px] h-[20px]">
+        Español
+      <% end %>
+      <%= link_to url_for(locale: :en), class: "text-white flex items-center text-sm" do %>
+        <!-- Bandera de USA -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" alt="USA" class="w-[20px] h-[20px]">
+        English
+      <% end %>
+    </div>
+
+    <!-- Enlaces de navegación -->
+    <div class="flex items-center space-x-4">
+      <%= link_to "Home", root_path, class: "text-white text-sm" %>
+      <%= link_to "New Form", new_image_path, class: "text-white text-sm" %>
+    </div>
   </div>
 </nav>

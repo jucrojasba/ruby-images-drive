@@ -19,7 +19,8 @@
   </head>
 
   <body>
-    <!-- Mensajes Flash -->
+    <%= render 'shared/navbar' %>
+
     <% if flash[:success] %>
       <p class="flash-success bg-green-100 text-green-800 p-4 rounded-md mb-4"><%= flash[:success] %></p>
     <% elsif flash[:error] %>
