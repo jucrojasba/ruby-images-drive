@@ -1,4 +1,6 @@
-<nav>
-  <%= link_to "Español", root_path(locale: :es), class: "nav-link" %>
-  <%= link_to "English", root_path(locale: :en), class: "nav-link" %>
+<nav class="bg-gray-800 p-4">
+  <div class="container mx-auto flex justify-end">
+    <%= link_to "Español", url_for(locale: :es), class: "text-white mx-2" %>
+    <%= link_to "English", url_for(locale: :en), class: "text-white mx-2" %>
+  </div>
 </nav>

@@ -1,5 +1,19 @@
 en:
-  hello: "Hello world"
+  images:
+    index:
+      title: "Image Gallery"
+      no_image: "No image available"
+      view_more: "View More"
+    show:
+      no_image: "No image available"
+      back: "Back"
+    new:
+      title: "Upload New Image"
+      errors: "Please fix the following errors:"
+      title_label: "Title"
+      description_label: "Description"
+      file_label: "Select file"
+      submit: "Upload"
   flash:
     success: "Image uploaded successfully!"
     error: "There was an error uploading the image."

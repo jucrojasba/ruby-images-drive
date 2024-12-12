@@ -1,5 +1,19 @@
 es:
-  hello: "Hola mundo"
+  images:
+    index:
+      title: "Galería de Imágenes"
+      no_image: "Sin imagen disponible"
+      view_more: "Ver más"
+    show:
+      no_image: "Sin imagen disponible"
+      back: "Volver"
+    new:
+      title: "Subir Nueva Imagen"
+      errors: "Por favor corrige los siguientes errores:"
+      title_label: "Título"
+      description_label: "Descripción"
+      file_label: "Seleccionar archivo"
+      submit: "Subir"
   flash:
     success: "¡Imagen subida exitosamente!"
     error: "Hubo un error al subir la imagen."
