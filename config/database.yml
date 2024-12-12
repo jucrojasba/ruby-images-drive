@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch("POSTGRES_USER", "default") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD", "S7Zy1HFKYLOe") %>
+  host: <%= ENV.fetch("POSTGRES_HOST", "ep-blue-glitter-a4x4xns1-pooler.us-east-1.aws.neon.tech") %>
+  port: <%= ENV.fetch("POSTGRES_PORT", 5432) %>
+  database: <%= ENV.fetch("POSTGRES_DATABASE", "verceldb") %>
+  sslmode: require
+
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
