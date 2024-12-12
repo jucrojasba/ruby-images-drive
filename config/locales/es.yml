@@ -21,3 +21,9 @@ es:
     messages:
       invalid_file_type: "El archivo debe ser una imagen en formato PNG, JPG o JPEG."
       file_too_large: "El archivo debe pesar menos de 3 MB."
+  es:
+  navbar:
+    spanish: "Español"
+    english: "Inglés"
+    home: "Inicio"
+    new_form: "Nuevo Formulario"
