@@ -14,14 +14,10 @@ en:
       description_label: "Description"
       file_label: "Select file"
       submit: "Upload"
-  activerecord:
-    errors:
-      models:
-        image:
-          attributes:
-            file:
-              invalid_format: "Must be an image in PNG, JPG, or JPEG format"
-              too_large: "Must be less than 3 MB"
   flash:
     success: "Image uploaded successfully!"
     error: "There was an error uploading the image."
+  errors:
+    messages:
+      invalid_file_type: "The file must be an image in PNG, JPG, or JPEG format."
+      file_too_large: "The file must be less than 3 MB."

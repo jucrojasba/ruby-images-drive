@@ -24,7 +24,7 @@
 
     <div class="mb-4">
       <%= f.label :file, t('images.new.file_label'), class: "block text-gray-700 font-bold mb-2" %>
-      <%= f.file_field :file, class: "w-full" %>
+      <%= f.file_field :file, class: "w-full", accept: "image/png, image/jpg, image/jpeg" %>
     </div>
 
     <div class="text-center">
